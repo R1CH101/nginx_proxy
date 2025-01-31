@@ -1,10 +1,7 @@
 version: "3.7"
 services:
   nginx_proxy:
-    image: nginx_proxy:latest
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: reiz/nginx_proxy:0.0.3
     container_name: nginx_proxy
     volumes:
       - ./nginx_allowlist.conf:/usr/local/nginx/conf/nginx.conf
